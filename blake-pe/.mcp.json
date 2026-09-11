@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "blake-pe": {
+      "command": "./server/run.sh",
+      "cwd": "."
+    }
+  }
+}

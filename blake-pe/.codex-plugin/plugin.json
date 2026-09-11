@@ -1,0 +1,31 @@
+{
+  "name": "blake-pe",
+  "version": "1.0.1",
+  "description": "Connect your own SMTP/IMAP email accounts on Mac. Choose a sender, send authorized email and read each connected Inbox.",
+  "author": {
+    "name": "BLAKE FORGE"
+  },
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "Blake-PE",
+    "shortDescription": "Your email accounts, together on your Mac.",
+    "longDescription": "Connect your own SMTP/IMAP mailboxes with password or app-password authentication through a native macOS dialog. Select the sender for each email and the account for Inbox reading. SMTP supports TLS or STARTTLS; IMAP uses TLS. Passwords remain in your Mac Keychain. OAuth sign-in is not included.",
+    "developerName": "BLAKE FORGE",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Show my connected email accounts.",
+      "Help me connect my own mailbox.",
+      "Show unread mail in an account I choose.",
+      "Prepare an email and let me choose the sender."
+    ],
+    "brandColor": "#F4511E",
+    "composerIcon": "./assets/profile.jpg",
+    "logo": "./assets/profile.jpg",
+    "logoDark": "./assets/profile.jpg"
+  }
+}
