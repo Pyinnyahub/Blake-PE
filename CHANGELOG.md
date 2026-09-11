@@ -1,5 +1,11 @@
 # Changes
 
+## 1.0.2
+
+- Rewrite the English overview and Burmese setup guides for public users.
+- Replace private-access and owner handoff instructions with download, setup and issue-reporting guidance.
+- Publish a matching documentation package; runtime behavior is unchanged.
+
 ## 1.0.1
 
 - Pin account settings throughout Inbox operations. A concurrent setup change can no longer label an old server's message with the new server's account reference.

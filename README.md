@@ -1,60 +1,65 @@
 # Blake-PE for Mac
 
-Use your own SMTP/IMAP email accounts from Codex on your Mac. Choose the sender for each email, prepare a reviewable draft, and read or search a selected account's Inbox.
+Connect your email accounts to Codex on your Mac. Choose a sender, prepare and send email, and read or search each connected Inbox.
 
-**Private distribution · v1.0.1**
+**v1.0.2 · Public preview · macOS**
 
-## Download and setup
+[Download for Mac](https://github.com/Pyinnyahub/Blake-PE/releases/tag/v1.0.2) · [မြန်မာလို Setup လမ်းညွှန်](README-FIRST.md) · [Report an issue](https://github.com/Pyinnyahub/Blake-PE/issues)
 
-Download **Blake-PE-Mac-v1.0.1.zip** from [Releases](https://github.com/Pyinnyahub/Blake-PE/releases). Private repository access is required.
+## What you can do
 
-1. Extract the ZIP.
-2. Run **Install Blake-PE.command**.
-3. Run **Connect Mailbox.command** and enter your own mailbox settings in the native dialog.
+- Connect multiple SMTP/IMAP email accounts and select the sender for each message.
+- Prepare a draft for review, then send it when ready.
+- Send plain-text email with file attachments. Each recipient receives a separate message.
+- Read and search a selected account's Inbox without marking messages as read.
+
+## Get started
+
+1. Download **Blake-PE-Mac-v1.0.2.zip** from the release page and extract it.
+2. Open **Install Blake-PE.command** and wait for installation to finish.
+3. Open **Connect Mailbox.command**, enter your provider's settings and choose **Save & Check Connection**.
 4. Start a new Codex task and select **Blake-PE**.
 
-Read the [မြန်မာလို Setup လမ်းညွှန်](README-FIRST.md) for the full walkthrough.
+The download is public; no collaborator invitation is needed. Setup starts with no connected accounts. Add your own mailbox to begin.
 
-## Requirements and scope
+Try these prompts:
 
-- macOS 12+, Python 3.10+, Codex desktop and internet access for installation.
-- Password or app-password authentication supported by the email provider. OAuth sign-in is not included.
-- SMTP with implicit TLS or STARTTLS; IMAP with implicit TLS. The same login username/password is used for both protocols.
-- Apple Silicon and Intel helper binaries are included. Intel hardware and every recipient/provider combination have not been live-tested.
-- The helper is ad-hoc signed, not Apple Developer ID signed or notarized. See the setup guide for macOS opening instructions.
+> Show my connected email accounts.
 
-## Data and behavior
+> Show unread mail in the account I choose.
 
-Mailbox passwords are stored in the current Mac's Keychain, bound to the account's connection settings. Account settings and draft/delivery records remain under `~/Library/Application Support/Blake-PE/` and are not part of this repository. Account names and messages returned through the tools become part of the user's Codex conversation.
+> Prepare an email and let me choose the sender.
 
-From and Reply-To match the chosen sender. Each recipient receives a separate message. Sender/content are locked into the draft. Changing account settings requires a new draft. Uncertain deliveries are not automatically resent. SMTP acceptance is not confirmation of Inbox delivery.
+Specify the sender's email address in your message to choose an account. To add another account later, open **Connect Mailbox.command → Add new mailbox**.
 
-Inbox tools use read-only IMAP and BODY.PEEK. Attachments are metadata only; remote images are not loaded. This version does not implement Sent-folder copies, threaded reply sending, background monitoring or OAuth login.
+## Before you install
 
-## Verification
+- **Mac:** macOS 12 or later, Python 3.10 or later, Codex desktop, and internet access for installation.
+- **Email provider:** SMTP and IMAP access using a password or app password. SMTP supports TLS or STARTTLS; IMAP requires implicit TLS. Both use the same login username and password.
+- **Authentication:** OAuth and Google/Microsoft browser sign-in are not included.
+- **macOS approval:** the native helper is ad-hoc signed, not Apple Developer ID signed or notarized. See the [setup guide](README-FIRST.md) for opening instructions.
 
-- 40 mail/account/Inbox behavioral tests.
-- 3 installer rollback and stale-file regression tests.
-- Empty-account MCP startup, dynamic account discovery and draft checks.
-- Installer integration checks using temporary folders with simulated pip/Codex calls.
+Apple Silicon and Intel helper binaries are included. First-time setup on other Macs and live provider compatibility still need broader testing. This is a public preview; check sending and Inbox access with your own account before relying on it for regular mail.
 
-See [QA-STATUS.md](QA-STATUS.md) for the scope and remaining live-device checks.
+## Account data and privacy
 
-```sh
-python3 -m pip install -r blake-pe/requirements.txt
-python3 blake-pe/tests/run_tests.py
-python3 blake-pe/tests/test_mcp_smoke.py
-python3 setup/test_install.py
-python3 setup/test_install_failures.py
-```
+Mailbox passwords are stored in macOS Keychain on your Mac. Account settings and draft/delivery records stay under `~/Library/Application Support/Blake-PE/`. Messages returned to Codex become part of your Codex conversation.
 
-All automated tests use fixture accounts. They do not send email or read real Keychain passwords.
+The package contains no preconfigured mailbox or credentials. Removing the plugin does not automatically delete saved settings, drafts or Keychain entries. Never include passwords or private messages in a public issue report.
 
-## Layout
+## Current limits
 
-- `blake-pe/`: installable plugin, Python server, Swift helper source, universal helper, skill and tests.
-- `setup/`: installer and temporary-folder integration tests.
-- `Install Blake-PE.command`: installation entry point.
-- `Connect Mailbox.command`: mailbox setup entry point.
+- Up to 50 recipients and 10 attachments per draft, with 15 MB total attachments before encoding. Provider limits also apply.
+- SMTP acceptance means the mail server accepted the message; it does not confirm Inbox delivery.
+- Changing account settings requires a new draft. Uncertain deliveries are not automatically resent.
+- No automatic Sent-folder copy, threaded reply sending or background monitoring.
+- Inbox attachments show filename/type/size only; remote images are not loaded.
+- Inbox times display in Asia/Bangkok; date filters use the IMAP delivery date.
 
-The package's profile image is included as Blake-PE branding. No personal mailbox addresses, recipient lists, passwords, email history or machine-specific user paths are included.
+## Testing and feedback
+
+The mail/account/Inbox suite contains 40 behavioral tests, plus 3 installer regression tests. MCP startup and installer integration checks also passed for the underlying v1.0.1 code. Version 1.0.2 updates documentation and release metadata only.
+
+See [QA-STATUS.md](QA-STATUS.md) for verification details and remaining checks, or [CHANGELOG.md](CHANGELOG.md) for release history.
+
+Found a problem? [Open an issue](https://github.com/Pyinnyahub/Blake-PE/issues) with your macOS version, Blake-PE version and the error message, with private information removed.

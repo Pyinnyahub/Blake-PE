@@ -1,8 +1,10 @@
 # Blake-PE for Mac — ကိုယ်ပိုင် Email နဲ့ သုံးရန်
 
-**Version 1.0.1 · Mac share package**
+**Version 1.0.2 · Public preview · macOS**
 
-ဒီ package ကို လက်ခံသူတစ်ယောက်ချင်းစီက သူ့ Mac မှာ install လုပ်ပြီး ကိုယ်ပိုင် email account တွေ ချိတ်နိုင်ပါတယ်။ ပေးပို့သူရဲ့ email account၊ password၊ စာတွေ၊ recipient စာရင်းနဲ့ chat history မပါပါဘူး။
+Blake-PE က Mac ပေါ်က Codex မှာ ကိုယ်ပိုင် email account တွေ ချိတ်ပြီး စာပို့ခြင်း၊ Inbox ဖတ်ခြင်းနဲ့ ရှာဖွေခြင်းတို့ လုပ်နိုင်တဲ့ plugin ဖြစ်ပါတယ်။ Account အများအပြား ထည့်နိုင်ပြီး စာပို့တိုင်း sender ကို ရွေးနိုင်ပါတယ်။
+
+[Download v1.0.2](https://github.com/Pyinnyahub/Blake-PE/releases/tag/v1.0.2) မှ **Blake-PE-Mac-v1.0.2.zip** ကို ရယူနိုင်ပါတယ်။ GitHub collaborator ဖိတ်ကြားချက် မလိုပါ။
 
 ## မစခင် လိုအပ်တာ
 
@@ -14,7 +16,7 @@
 
 ## ၁ — Install လုပ်ပါ
 
-ZIP ဖိုင်ကို ဖြည်ပြီး **Install Blake-PE.command** ကို ဖွင့်ပါ။ Install အောင်မြင်တဲ့စာ ပြသည်အထိ စောင့်ပါ။ သင့်စက်ထဲက တခြား plugin တွေကို catalog ထဲမှာ ဆက်ထိန်းထားပါတယ်။
+ZIP ဖိုင်ကို ဖြည်ပြီး **Install Blake-PE.command** ကို ဖွင့်ပါ။ Install အောင်မြင်တဲ့စာ ပြသည်အထိ စောင့်ပါ။
 
 ဒီ community package ကို Apple Developer ID နဲ့ sign/notarize မလုပ်ရသေးပါ။ macOS က unknown developer လို့ ပိတ်ထားပြီး ဒီ package ကို ယုံကြည်စိတ်ချကြောင်း စစ်ထားပြီးဖြစ်လျှင် **System Settings → Privacy & Security → Open Anyway** ရှိမရှိ စစ်ပါ။ အဖွဲ့အစည်းပိုင် Mac ဆိုရင် admin က ခွင့်ပြုချက်လိုနိုင်ပါတယ်။ [Apple ၏ တရားဝင်ညွှန်ကြားချက်](https://support.apple.com/en-ca/102445)
 
@@ -47,7 +49,7 @@ Task အသစ်ဖွင့်ပြီး **Blake-PE** plugin ကိုရွ
 
 > ငါရွေးထားတဲ့ account ရဲ့ unread email တွေ ပြပေး။
 
-စာပို့ဖို့ sender၊ လက်ခံသူနဲ့ စာသားကို ပေးပါ။ ပို့မယ့်စာပြင်ပေးရန်နဲ့ တကယ်ပို့ရန်ကို သင့်ညွှန်ကြားချက်အတိုင်း ခွဲလုပ်ပါတယ်။ Sender ရွေးခြင်းက chat မှာ ပြောပြီးရွေးသည့်ပုံစံပါ။ Composer မှာ permanent dropdown မထည့်ထားပါ။
+စာပို့ဖို့ sender၊ လက်ခံသူနဲ့ စာသားကို ပေးပါ။ ပို့မယ့်စာကို အရင်စစ်လိုလျှင် draft ပြင်ပေးရန် တောင်းဆိုပါ။ Sender ကို chat ထဲမှာ email လိပ်စာနဲ့ သတ်မှတ်နိုင်ပါတယ်။ ဥပမာ `hello@example.com ကနေ ပို့ဖို့ draft ပြင်ပေးပါ` လို့ ရေးနိုင်ပါတယ်။ ဒီလိပ်စာက နမူနာသာဖြစ်ပြီး ချိတ်ထားတဲ့ ကိုယ်ပိုင်လိပ်စာနဲ့ အစားထိုးပါ။
 
 ## သုံးနိုင်သည့်အရာနှင့် ကန့်သတ်ချက်
 
@@ -67,8 +69,8 @@ Task အသစ်ဖွင့်ပြီး **Blake-PE** plugin ကိုရွ
 
 Email ဖတ်ပြီး Codex ကို ပြပေးသောအကြောင်းအရာသည် သင့် Codex conversation ထဲ ပါလာပါတယ်။ Plugin ကို remove လုပ်ခြင်းက settings/drafts/password များကို အလိုအလျောက် မဖျက်ပါ။ Server setting ပြောင်းလျှင် credential အသစ်ချိတ်ပြီး draft အသစ် ပြင်ပါ။ အရင် setting နဲ့ဆိုင်တဲ့ Keychain item ကို လိုအပ်ပါက Keychain Access မှ ဖယ်ရှားနိုင်ပါတယ်။
 
-## ထပ် share လုပ်ရန်
+## စမ်းသပ်ဗားရှင်းအကြောင်းနှင့် အကူအညီ
 
-မူလ **Blake-PE-Mac-v1.0.1.zip** ကိုပဲ ပေးပါ။ ကိုယ့် `Library/Application Support/Blake-PE` folder သို့မဟုတ် Keychain export ကို package ထဲ မထည့်ပါနဲ့။
+ဒီဗားရှင်းက public preview ဖြစ်ပါတယ်။ Mac မော်ဒယ်နဲ့ email provider အားလုံးကို လက်တွေ့စမ်းသပ်ထားခြင်း မရှိသေးပါ။ Setup ပြီးလျှင် ကိုယ်တိုင်စစ်နိုင်တဲ့ လိပ်စာတစ်ခုဆီ test email ပို့ပြီး Inbox ဖတ်နိုင်မှုကိုလည်း စစ်ပါ။ စမ်းသပ်ထားသည့်အရာများနဲ့ ကျန်ရှိသည့် ကန့်သတ်ချက်တွေကို [QA status](https://github.com/Pyinnyahub/Blake-PE/blob/main/QA-STATUS.md) မှာ ဖတ်နိုင်ပါတယ်။
 
-ဒီ version ကို စမ်းသပ်သူ အနည်းငယ်ထံ အရင်ပေးပြီး fresh Mac မှာ install/login စမ်းပါ။ Recipient Mac နဲ့ provider အားလုံးကို live test မလုပ်ရသေးပါ။ `QA-STATUS.md` မှာ စစ်ပြီးသည့်အရာတွေ ရှိပါတယ်။
+အဆင်မပြေမှုတွေကို [GitHub Issues](https://github.com/Pyinnyahub/Blake-PE/issues) မှာ တင်ပြနိုင်ပါတယ်။ macOS version၊ Blake-PE version နဲ့ error စာသားကို ထည့်ပါ။ Password၊ email စာအပြည့်အစုံနဲ့ ကိုယ်ရေးအချက်အလက်တွေကို ဖယ်ရှားပြီးမှ တင်ပါ။

@@ -1,6 +1,6 @@
 {
   "name": "blake-pe",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Connect your own SMTP/IMAP email accounts on Mac. Choose a sender, send authorized email and read each connected Inbox.",
   "author": {
     "name": "BLAKE FORGE"
